@@ -132,6 +132,11 @@ ssh_authorized_principals_file: ''  # sshd
 #   - { path: '/etc/ssh/auth_principals/myuser', principals: [ 'masteradmin', 'webserver' ] }
 ssh_authorized_principals: []       # sshd
 
+# Specifies which algorithms are allowed for signing of certificates by certificate authorities (CAs). The default is:
+# ssh-ed25519,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384, ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256,ssh-rsa
+# Certificates signed using other algorithms will not be accepted for public key or host-based authentication.
+ssh_ca_signature_algorithms: ''     # sshd
+
 # false to disable printing of the MOTD
 ssh_print_motd: false               # sshd
 ssh_print_pam_motd: false           # sshd

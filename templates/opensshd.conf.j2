@@ -169,6 +169,11 @@ AuthorizedPrincipalsFile {{ ssh_authorized_principals_file }}
 {% endif %}
 {% endif %}
 
+{% if ssh_ca_signature_algorithms %}
+# Specifies which algorithms are allowed for signing of certificates by certificate authorities (CAs). Certificates signed using other algorithms will not be accepted for public key or host-based authentication.
+CASignatureAlgorithms {{ ssh_ca_signature_algorithms }}
+{% endif %}
+
 # Network
 # -------
 
